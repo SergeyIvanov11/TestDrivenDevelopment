@@ -24,5 +24,9 @@ class PhoneBookTest {
         Assertions.assertEquals(2, thirdTest);
     }
 
-
+    @Test
+    void testFindByNumber() {
+        String testFindByNumber = phoneBook.findByNumber("+79161234568");
+        Assertions.assertEquals("Fedya", testFindByNumber);
+    }
 }

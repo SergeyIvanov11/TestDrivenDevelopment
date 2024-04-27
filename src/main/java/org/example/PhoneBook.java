@@ -13,14 +13,14 @@ public static final Map<String, String> phonenumbers = new TreeMap<>();
         }
         return phonenumbers.size();
     }
-
+    public String findByNumber(String phoneNumber){
+        return null;
+    }
 
 }
 
 
 /*
-Реализовать метод add так, чтобы все тесты проходили.
-Сделать коммит с сообщением add implemented.
 Создать пустой метод-заглушку findByNumber в классе PhoneBook, который только возвращает null.
 Создать тест или тесты на метод findByNumber в классе тестов PhoneBookTest.
 Убедиться, что всё компилируется и тесты не проходят. Сделать коммит с сообщением Stub and tests for findByNumber.
