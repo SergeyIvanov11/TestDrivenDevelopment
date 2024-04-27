@@ -4,27 +4,28 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class PhoneBook {
-public static final Map<String, String> phonenumbers = new TreeMap<>();
+    public static final Map<String, String> phonenumbers = new TreeMap<>();
+
+    public PhoneBook() {
+    }
+
     public int add(String name, String phoneNumber) {
-        if(phonenumbers.containsKey(name)){
+        if (phonenumbers.containsKey(name)) {
             System.out.println("Запись с этим именем уже содержится в телефонной книге!");
         } else {
             phonenumbers.put(name, phoneNumber);
         }
         return phonenumbers.size();
     }
-    public String findByNumber(String phoneNumber){
-        return null;
+
+    public String findByNumber(String phoneNumber) {
+        String str = "К сожалению, записи с таким номером нет";
+        for (Map.Entry pair : phonenumbers.entrySet()) {
+            if (pair.getValue().equals(phoneNumber)) {
+                str = (String) pair.getKey();
+            }
+        }
+        return str;
     }
 
 }
-
-
-/*
-Создать пустой метод-заглушку findByNumber в классе PhoneBook, который только возвращает null.
-Создать тест или тесты на метод findByNumber в классе тестов PhoneBookTest.
-Убедиться, что всё компилируется и тесты не проходят. Сделать коммит с сообщением Stub and tests for findByNumber.
-Реализовать метод findByNumber так, чтобы все тесты проходили.
-Сделать коммит с сообщением findByNumber implemented.
-...
- */
