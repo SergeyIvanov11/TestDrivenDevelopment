@@ -40,9 +40,15 @@ public class PhoneBookTest {
         Assertions.assertEquals("К сожалению, записи с таким номером нет", testFindByNumber2);
     }
 
-
-
-
-
+    @Test
+    void testFindByName() {
+        String testFindByName = phoneBook.findByName("Petya");
+        Assertions.assertEquals("+79161234567", testFindByName);
+    }
+    @Test
+    void testFindByName2() {
+        String testFindByName2 = phoneBook.findByName("Sveta");
+        Assertions.assertEquals("К сожалению, записи с таким именем нет", testFindByName2);
+    }
 
 }
