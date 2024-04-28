@@ -28,6 +28,10 @@ public class PhoneBook {
         return str;
     }
     public String findByName(String name) {
-        return null;
+        String str = "К сожалению, записи с таким именем нет";
+            if (phonenumbers.containsKey(name)) {
+                str = phonenumbers.get(name);
+            }
+        return str;
     }
 }
