@@ -51,4 +51,9 @@ public class PhoneBookTest {
         Assertions.assertEquals("К сожалению, записи с таким именем нет", testFindByName2);
     }
 
+    @Test
+    void testPrintAllNames() {
+        String testPrintAllNames = phoneBook.printAllNames();
+        Assertions.assertEquals("Fedya, Petya", testPrintAllNames);
+    }
 }
