@@ -27,14 +27,21 @@ public class PhoneBook {
         }
         return str;
     }
+
     public String findByName(String name) {
         String str = "К сожалению, записи с таким именем нет";
-            if (phonenumbers.containsKey(name)) {
-                str = phonenumbers.get(name);
-            }
+        if (phonenumbers.containsKey(name)) {
+            str = phonenumbers.get(name);
+        }
         return str;
     }
+
     public String printAllNames() {
-        return null;
+        StringBuilder stringBuilder = new StringBuilder("");
+        for (String name : phonenumbers.keySet()) {
+            stringBuilder.append(name + ", ");
+        }
+        stringBuilder.delete(stringBuilder.length() - 2, stringBuilder.length());
+        return stringBuilder.toString();
     }
 }
